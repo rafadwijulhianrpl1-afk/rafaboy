@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistem Antrian Layanan Sekolah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sistem Antrian Layanan Sekolah</h1>
+    <p class="sub">Ambil nomor, lalu tunggu sampai nomor Anda dipanggil.</p>
+
+    <div class="grid">
+      <!-- Nomor yang sedang dipanggil + tombol petugas -->
+      <section class="board" aria-live="polite">
+        <div class="label">Sedang dipanggil</div>
+        <div class="nomor" id="nomor">---</div>
+        <div class="layanan" id="layanan"></div>
+        <div class="aksi">
+          <button class="utama" id="btnNext">Panggil berikutnya</button>
+          <button class="sekunder" id="btnUlang">Panggil ulang</button>
+          <button class="bahaya" id="btnReset">Reset</button>
+        </div>
+        <label class="suara"><input type="checkbox" id="suara" checked> Suara panggilan</label>
+      </section>
+
+      <!-- Pengunjung mengambil nomor -->
+      <section class="box">
+        <h2>Ambil nomor</h2>
+        <div id="daftarKat"></div>
+        <button class="ambil" id="btnAmbil">Ambil nomor</button>
+        <div class="tiket" id="tiket" hidden></div>
+      </section>
+    </div>
+
+    <div class="bawah">
+      <section class="box">
+        <h2>Daftar antrian <span class="jumlah" id="jumlah"></span></h2>
+        <ol id="antrian"></ol>
+      </section>
+      <section class="box">
+        <h2>Sudah dipanggil</h2>
+        <ol id="riwayat"></ol>
+      </section>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
